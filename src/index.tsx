@@ -6,7 +6,7 @@ const App = () => {
   const [markdown, setMarkdown] = useState<string>('# 読み込み中...');
 
   useEffect(() => {
-    fetch('/privacy-policy.md')
+    fetch('privacy-policy.md')
       .then((res) => res.text())
       .then(setMarkdown);
   }, []);

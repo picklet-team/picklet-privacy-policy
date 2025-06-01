@@ -3,8 +3,8 @@ import { rspack } from '@rspack/core';
 
 export default defineConfig({
   entry: './src/index.tsx',
-  mode: 'development',
-  devtool: 'source-map',
+  mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
+  devtool: process.env.NODE_ENV === 'production' ? false : 'source-map',
   resolve: {
     extensions: ['.tsx', '.ts', '.js', '.jsx']
   },
@@ -35,6 +35,17 @@ export default defineConfig({
   plugins: [
     new rspack.HtmlRspackPlugin({
       template: './public/index.html'
+    }),
+    new rspack.CopyRspackPlugin({
+      patterns: [
+        {
+          from: 'public',
+          to: '.',
+          globOptions: {
+            ignore: ['**/index.html'] // index.htmlはHtmlRspackPluginが処理するので除外
+          }
+        }
+      ]
     })
   ],
   devServer: {

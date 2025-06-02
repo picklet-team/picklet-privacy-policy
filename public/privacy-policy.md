@@ -79,8 +79,8 @@
 
 ---
 
-## 第8条（お問い合わせ窓口）
+## お問い合わせ
 
-利用者情報の取り扱いに関するご意見、ご質問、ご要望等は、以下の窓口までご連絡ください。
+本ポリシーに関するご質問やご不明な点がございましたら、以下までお気軽にお問い合わせください。
 
-**メールアドレス**: [picklet.team@gmail.com](mailto:picklet.team@gmail.com)
+**お問い合わせ先**: [support.picklet.app](https://support.picklet.app)
